@@ -48,5 +48,6 @@ public class ClientController {
         return ResponseEntity
                 .ok(ClientLoginResponse.builder().accessToken(data[0]).userId(data[2]).email(data[3]).build());
     }
+    
 
 }
