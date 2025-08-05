@@ -1,4 +1,4 @@
-package com.authguard.authguard_client_service.Model;
+package com.authguard.authguard_client_service.Model.Entity;
 
 import java.time.LocalDate;
 import java.util.UUID;
