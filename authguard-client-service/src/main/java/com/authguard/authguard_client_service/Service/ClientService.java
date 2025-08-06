@@ -42,7 +42,7 @@ public class ClientService implements UserDetailsService {
     }
 
     @Override
-    @Cacheable("logedInUser")
+    @Cacheable(cacheNames = "logedInUser", key = "#username")
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         ClientEntity clientEntity = findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Username not found : " + username));
