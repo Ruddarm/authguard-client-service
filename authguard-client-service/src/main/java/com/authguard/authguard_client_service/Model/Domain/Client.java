@@ -1,5 +1,6 @@
 package com.authguard.authguard_client_service.Model.Domain;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -14,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Client implements UserDetails {
+public class Client implements UserDetails,Serializable {
     private String username;
     private String userId;
     private String password;

@@ -26,12 +26,13 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({ ResourceException.class })
     public ResponseEntity<ErrorResponse> handleResourceExceptionHandler(ResourceException ex) {
         return new ResponseEntity<>(ErrorResponse.builder().message(ex
-                .getMessage()).build(), HttpStatus.BAD_GATEWAY);
+                .getMessage()).build(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler({ Exception.class })
     public ResponseEntity<ErrorResponse> handleGenericException(Exception ex) {
+        ex.printStackTrace();
         return new ResponseEntity<>(ErrorResponse.builder().message(ex
-                .getMessage()).build(), HttpStatus.BAD_GATEWAY);
+                .getMessage()).build(), HttpStatus.BAD_REQUEST);
     }
 }
