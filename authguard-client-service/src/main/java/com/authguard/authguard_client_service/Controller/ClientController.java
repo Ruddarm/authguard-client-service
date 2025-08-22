@@ -29,7 +29,7 @@ public class ClientController {
 
     @GetMapping
     public String getName() {
-        return "name is fuck man";
+        return "name of client";
     }
 
     @PostMapping("/signup")
